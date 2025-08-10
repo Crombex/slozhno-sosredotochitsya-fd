@@ -1,6 +1,6 @@
 :root {
   --background-image: url(../images/cover-image-dark.png);
-  --background-color: #010138;
+  --background-color: #000028;
   --text-color: #f1b2ce;
   --h1-text-color: #db00ff;
   --h3-text-color: #000028;
@@ -10,9 +10,9 @@
   --translucent-color: #ff007066;
   --footer-text-shadow: #ff0070;
   --border-line: 1px solid #ff0070;
+  --line-height: 1.3;
   --size-xs: 10px;
   --size-s: 20px;
-  --line-height: 23.4px;
   --size-m: 25px;
   --size-l: 40px;
   --size-xl: 60px;

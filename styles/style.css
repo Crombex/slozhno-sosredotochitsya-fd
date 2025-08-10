@@ -3,22 +3,22 @@
   background-image: var(--background-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
   background-attachment: fixed;
 }
 
 .header {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr min-content;
   grid-template-rows: 1fr min-content 1fr;
   margin-block-end: var(--size-l);
   padding: var(--size-xs);
+  min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .decorated-zone {
-  min-block-size: 668px;
-  block-size: 100vh;
+  position: relative;
 }
 
 .decorated-zone::before {
@@ -52,6 +52,8 @@
 
 .header__decorative-inscription::after {
   content: '';
+  position: relative;
+  top: -3px;
   display: inline-block;
   margin-inline-start: var(--size-xs);
   border-radius: 50%;
@@ -90,7 +92,7 @@
   border-bottom: var(--border-line);
 }
 
-.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+.header__theme-menu-button:hover {
   outline: 1px solid var(--translucent-color, #ff007066);
 }
 
@@ -119,7 +121,7 @@
   color: var(--h3-text-color);
   font-weight: 700;
   font-size: inherit;
-  line-height: 24px;
+  line-height: var(--line-height);
   background-color: var(--accent-color, #ff0070);
 }
 
@@ -127,17 +129,17 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--size-s);
-  margin-block-end: 47px;
+  margin-block-end: 50px;
   padding: 0 var(--size-xs);
 }
 
-.section:nth-child(3) .article__heading {
+.section_accent-article-heading .article__heading {
   font-weight: 400;
 }
 
 .section__heading {
   color: var(--section-heading-color, #ff0070);
-  font-size: 18px;
+  font-size: inherit;
   line-height: var(--line-height);
 }
 
@@ -180,16 +182,17 @@
 
 .gallery-item {
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
 
 .footer {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .footer__title {
@@ -236,7 +239,7 @@
 
   .section {
     grid-template-columns: 1fr 2fr;
-    margin-block-end: 78px;
+    margin-block-end: 80px;
     padding: 0 var(--size-s);
   }
 
@@ -311,5 +314,9 @@
 
   .section_specific .article {
     grid-column: initial;
+  }
+
+  .section_else-gap {
+    column-gap: var(--size-xs);
   }
 }

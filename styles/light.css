@@ -1,6 +1,6 @@
 :root.theme-light {
   --background-image: url(../images/cover-image-light.png);
-  --background-color: #fbeffa;
+  --background-color: #fff1f7;
   --text-color: #353430;
   --h1-text-color: #ffc2e6;
   --h3-text-color: #353430;
@@ -18,7 +18,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --background-image: url(../images/cover-image-light.png);
-    --background-color: #fbeffa;
+    --background-color: #fff1f7;
     --text-color: #353430;
     --h1-text-color: #ffc2e6;
     --h3-text-color: #353430;
